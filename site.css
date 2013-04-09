@@ -1,5 +1,85 @@
-body {
+html, body {
+	height: 100%;
 	background-color:white;	
+	margin:0px;
+}
+
+body .top-bar {
+	margin-right:100px;
+	margin-top:20px;
+	text-align: right;
+}
+
+.top-bar ul
+{
+	list-style-type: none;
+	height: 35px;
+}
+
+.top-bar ul li
+{
+	display:inline-block;
+	padding:12px;
+	margin-left: 10px;
+	width:auto;
+}
+
+.top-bar ul .share-buttons
+{
+	background: url('sharing.png');
+	cursor:pointer;
+}
+
+.top-bar ul .fb
+{
+	background-position: 0 0;
+}
+
+.top-bar ul .fb:hover
+{
+	background-position: 0 24;
+}
+
+.top-bar ul  .tw
+{
+	background-position: 105 0;
+}
+
+.top-bar ul  .tw:hover
+{
+	background-position: 105 24;
+}
+
+.top-bar ul .gplus
+{
+	background-position: 62 0;
+}
+
+.top-bar ul .gplus:hover
+{
+	background-position: 62 24;
+}
+
+
+.top-bar ul .pint
+{
+	background-position: 24 0;
+}
+
+.top-bar ul .pint:hover
+{
+	background-position: 24 24;
+}
+
+body .bottom-bar{
+	position: relative;
+	margin-top:200px;
+}
+
+.bottom-bar .bottom-icons{
+	margin-left: 100px;
+	height:60px;
+	background: url('footericons.png') no-repeat;
 }
 
 .MainWrapper {
@@ -8,6 +88,44 @@ body {
 	margin-right:25%;
 	width:auto;
 	height:500px;
+}
+
+#main-content {
+	width:100%;
+	
+	margin-top:150px; 
+	margin-bottom:150px;
+}
+
+#list-content {
+	margin-top:150px;
+	height: 400px
+}
+
+#list-content ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+#list-content ul li {
+	display:list-item;
+	margin-left:0px;
+	}
+
+#list-content .list-item {
+	cursor: pointer;
+	font-size: 35px;
+}
+
+#list-content .list-item-selected{
+	background: url('horizontal-band.png');
+	background-repeat: repeat-x;
+	height: 125px;
+	font-size: 55px;
+	color: white;
+	vertical-align: middle;
+	padding-top:25px;
 }
 
 div .inside {
@@ -41,4 +159,22 @@ a.login-button
 a.login-button:hover{
 	background-position:  0 163;
 	height: 163px;
+}
+
+.handwrite {
+	padding-bottom:10px;
+	font-family: 'Patrick Hand SC';
+	vertical-align: middle;
+}
+
+.center-item
+{padding-top:90px;}
+
+.left-item
+{padding-left:350px;}
+
+.left-item-selected
+{
+ padding-left:310px;
+ font-size: 65px;
 }
