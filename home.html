@@ -18,7 +18,8 @@
 			    
 			    FB.init({
 			      appId      : '401152856648634', // App ID
-			      channelUrl : 'http://www.cancan.apphb.com/home.html', // Channel File
+			      channelUrl : '//www.cancan.apphb.com/home.html', // Channel File
+
 			      status     : true, // check login status
 			      cookie     : true, // enable cookies to allow the server to access the session
 			      xfbml      : true  // parse XFBML
@@ -30,9 +31,7 @@
 						    // connected
 						  } else if (response.status === 'not_authorized') {
 						    // not_authorized
-						   	//login();
-						  } else {
-						    // not_logged_in
+						  } else {						    // not_logged_in
 						    //login();
 						  }
 					 });
@@ -54,7 +53,7 @@
 			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 			     if (d.getElementById(id)) {return;}
 			     js = d.createElement('script'); js.id = id; js.async = true;
-			     js.src = "http://connect.facebook.net/en_US/all.js";
+			     js.src = "//connect.facebook.net/en_US/all.js";
 			     ref.parentNode.insertBefore(js, ref);
 			   }(document));
 			</script>
@@ -66,11 +65,8 @@
 		</div>
 		<div class="inside">
 			<a onClick="login()" class="login-button" id="login-access" href="#"></a>
-		</div>	
 	</div>
 	</body>
 	<script type="text/javascript">
- 
-
 	</script>
 </html>
