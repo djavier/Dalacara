@@ -3,11 +3,11 @@ body {
 }
 
 .MainWrapper {
-	margin-top:300px;
+	margin-top:250px;
 	margin-left:25%;
 	margin-right:25%;
 	width:auto;
-	height:600px;
+	height:500px;
 }
 
 div .inside {
@@ -20,5 +20,24 @@ div .inside {
 div .middle-text{
 	text-align: center;
 	padding:10px;
-	font-family: 'Patrick Hand SC', cursive;
+	font-family: 'Patrick Hand SC';
+	font-size: 20px;
+}
+
+div .red { 
+	color:#ff0000;
+}
+
+a.login-button
+{
+	margin-left: 25%;
+	width:165px;
+	height: 165px;
+	background:url('LoginFB.png') 0 0;
+	display:block;
+}
+
+a.login-button:hover{
+	background-position:  0 163;
+	height: 163px;
 }
