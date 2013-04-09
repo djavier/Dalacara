@@ -4,15 +4,21 @@
 		<title>Home</title>
 		<link href="./site.css" rel="stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 	</head>
 	<body>
+
 		<div id="fb-root"></div>
+
+
+	
 			<script>
 			  // Additional JS functions here
 			  window.fbAsyncInit = function() {
+			    
 			    FB.init({
 			      appId      : '401152856648634', // App ID
-			      channelUrl : '//www.cancan.apphb.com/home.html', // Channel File
+			      channelUrl : 'http://www.cancan.apphb.com/home.html', // Channel File
 			      status     : true, // check login status
 			      cookie     : true, // enable cookies to allow the server to access the session
 			      xfbml      : true  // parse XFBML
@@ -24,10 +30,10 @@
 						    // connected
 						  } else if (response.status === 'not_authorized') {
 						    // not_authorized
-						    login();
+						   	//login();
 						  } else {
 						    // not_logged_in
-						    login();
+						    //login();
 						  }
 					 });
 			  };
@@ -36,6 +42,7 @@
 				    FB.login(function(response) {
 				        if (response.authResponse) {
 				            // connected
+				            self.location="Index.html"
 				        } else {
 				            // cancelled
 				        }
@@ -47,20 +54,23 @@
 			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 			     if (d.getElementById(id)) {return;}
 			     js = d.createElement('script'); js.id = id; js.async = true;
-			     js.src = "//connect.facebook.net/en_US/all.js";
+			     js.src = "http://connect.facebook.net/en_US/all.js";
 			     ref.parentNode.insertBefore(js, ref);
 			   }(document));
 			</script>
+
 
 	<div class="MainWrapper">
 		<div class="inside middle-text ">
 			 <span> ESTAS A SOLO UN CLICK DE <span class="red"> DAR LA CARA </span> POR LOS PROBLEMAS DE TU PAIS </span>
 		</div>
 		<div class="inside">
-			<a class="login-button" href="#"></a>
+			<a onClick="login()" class="login-button" id="login-access" href="#"></a>
 		</div>	
 	</div>
 	</body>
 	<script type="text/javascript">
+ 
+
 	</script>
 </html>
