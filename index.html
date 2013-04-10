@@ -6,6 +6,12 @@
 		<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<!--  jCarousel library -->
+		<script type="text/javascript" src="./jcarousel/jquery.jcarousel.min.js"></script>
+	<!--		<script type="text/javascript" src="./jcarousel/jquery-1.4.2.min.js"></script> -->
+		<!-- jCarousel skin stylesheet -->
+		<link rel="stylesheet" type="text/css" href="./jcarousel/skin.css" />
+		
 	</head>
 	<body>
 	<div class="top-bar">
@@ -26,17 +32,54 @@
 						<li>
 							<div class="list-item">
 								<div class="handwrite left-item">DELINCUENCIA</div>
+								<div class="content-item-wrapper">
+										<ul class="content-item"> 
+											<li> 
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
+												</div>
+											 </li>
+											<li> 
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+
+											    </div>
+											 </li>
+											<li>
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+												</div>
+											</li>
+											<li>
+												<div class="handwrite-item">
+											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+											 	</div>
+											 </li>
+										</ul>
+								</div>
 							</div>
+							<div class="clearfix"/>
 						</li>
+						<div class="clearfix"/>
 						<li>
 							<div class="list-item"> 
-							<div class="handwrite left-item">VIOLENCIA</div>
+								<div class="handwrite left-item">VIOLENCIA</div>
+								<div class="content-item-wrapper">
+								
 							</div>
+							</div>
+							<div class="clearfix"/>
+							
 						</li>
+						<div class="clearfix"/>
 						<li >
 							<div class="list-item">
 							<div class="handwrite left-item">INMORALIDAD</div>
+							<div class="content-item-wrapper">
+								
 							</div>
+							</div>
+							<div class="clearfix"/>
 						</li>
 					</ul>
 				</div>
@@ -58,16 +101,54 @@
  
 		$(function(){
 
-			$("#list-content ul li").click(function(){
+			$("#list-content ul li").click(function(event){
+				event.preventDefault();
 				
+				//$(this).find('.list-item').effect('clip','slow')		
+				//$(this).find('.list-item').animate({height:"125px"},'slow');
 				
+				//hide item and set bg after hides completes
+				$(this).hide('clip','slow',function(){bg(this);});
 				//$(this).find('.list-item').hide();
+				//$(this).find('.list-item').addClass('list-item-selected');
+				//$(this).find('.list-item').find('.handwrite').addClass('left-item-selected');
+				//setTimeout(show(this), 3000);
+				//$(this).show();//.animate({height:"125px"},{duration:'slow', easing:'easeInOutElastic'});
+				$(this).show("clip",200);
+				$(this).animate(
+						{marginTop:"25px", marginBottom:"25px"},
+						{duration:'slow', 
+						 easing:'easeInOutCirc', 
+						 done: function() { 
+								$(this).find('.list-item').addClass ("list-item-selected",1000);
+								$(this).find('.list-item').find('.handwrite').addClass("left-item-selected",1000);
+								$(this).find('.list-item').find('.content-item-wrapper').show('clip','slow');
+								$(this).find('.list-item').find('.content-item').jcarousel(
+									{
+										//Carousel configuration goes here
+										//Doc @ http://sorgalla.com/projects/jcarousel/
+										scroll : 1,
+										visible: 1,
+										wrap:  "left",
+										buttonNextHTML:"<img src='rightarrow.png' style=' position:absolute; z-index:9000; display: block;float: left;margin-top: -110px; margin-left:600px'  alt='next'/>",
+										buttonPrevHTML:"<img src='leftarrow.png' style='display: block;float: right;margin-top: -110px; position:absolute; z-index:9000;' alt='next'/>"
+									});;
+										  }
+								}
+					);
+				//$(this).find('.list-item').show();
 				
-				$(this).find('.list-item').animate({height:"125px"},'slow');
-				$(this).find('.list-item').addClass('list-item-selected');
-				$(this).find('.list-item').find('.handwrite').addClass('left-item-selected');
-
+				//animate(
+					//											   {fontSize: "65px"},      																			  style='display: block;float: right;margin-top: -110px;'
+						//										   100); 
+			    $(this).off('click');
 			});
+
+			function bg(elem)
+			{
+				$(elem).find('.list-item').css("background-image","url('horizontal-band.png')");
+				$(elem).find('.list-item').css("color","white");
+			}
 		});
 	</script>
 </html>

@@ -112,20 +112,38 @@ body .bottom-bar{
 	display:list-item;
 	margin-left:0px;
 	}
+	
+#list-content .content-item-wrapper{
+	
+	margin-right:200px;
+	width:800px;
+	height:125px;
+	float: right;
+	display:none;
+	overflow:hidden;
+	/*background-color: gray;*/
+}
+
+#list-content .content-item{
+	width:200px;
+	height:125px;
+	/*background-color: gray;*/
+}
 
 #list-content .list-item {
 	cursor: pointer;
 	font-size: 35px;
+	width:100%;
 }
 
 #list-content .list-item-selected{
-	background: url('horizontal-band.png');
+	/*background: url('horizontal-band.png');*/
 	background-repeat: repeat-x;
 	height: 125px;
 	font-size: 55px;
 	color: white;
 	vertical-align: middle;
-	padding-top:25px;
+	width:100%;
 }
 
 div .inside {
@@ -167,14 +185,35 @@ a.login-button:hover{
 	vertical-align: middle;
 }
 
+.handwrite-item {
+	font-family: 'Patrick Hand SC';
+	text-align: center;
+	font-size: 30px;
+	width: 325px;
+	margin-left:25%;
+	margin-top:3%;
+
+	/*padding-top: 8%;
+	padding-left: 40%;*/
+}
+
+
 .center-item
 {padding-top:90px;}
 
 .left-item
-{padding-left:350px;}
+{padding-left:350px;
+ width:500px;
+ float:left;
+}
 
 .left-item-selected
 {
  padding-left:310px;
+ padding-top:15px;
  font-size: 65px;
+}
+
+.clearfix {
+	clear:both;
 }
