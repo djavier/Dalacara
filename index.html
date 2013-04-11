@@ -244,7 +244,7 @@
 									                            //val.replace('}','}"');
 									                            //alert(val);
 									                            //var data = $.parseJSON(val);
-									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,picture' }, function(response) {
+									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender,picture' }, function(response) {
 																  	if(response.data) {
 															            $.each(response.data,function(index,friend) {
 															                alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender + ' picture:' + response.picture);
