@@ -244,8 +244,16 @@
 									                            val.replace('}','}"');
 									                            alert(val);
 									                            var data = $.parseJSON(val);
-									                            FB.api('/me/friends', { fields: 'name,id,location,birthday' }, function(result) {
-																  document.getElementById('fb-test').innerHTML = $.parseJSON(result);
+									                            FB.api('/me/friends', { fields: 'name,id,location,birthday' }, function(response) {
+																  	if(response.data) {
+															            $.each(response.data,function(index,friend) {
+															                alert(friend.name + ' has id:' + friend.id);
+															                 if (index == 4)
+															                 	break;
+															            });
+															        } else {
+															            alert("Error!");
+															        }
 																})
 									                            
 
