@@ -245,7 +245,7 @@
 									                            alert(val);
 									                            var data = $.parseJSON(val);
 									                            FB.api('/me/friends', { fields: 'name,id,location,birthday' }, function(result) {
-																  document.getElementById('fb-test').innerHTML = $parseJSON(result);
+																  document.getElementById('fb-test').innerHTML = $.parseJSON(result);
 																})
 									                            
 
