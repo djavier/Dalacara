@@ -7,13 +7,64 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
 		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<!--  jCarousel library -->
-		<script type="text/javascript" src="./jcarousel/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src=".//jcarousel/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src=".//jcarousel/jquery.json-2.4.min.js"></script>
+		
 	<!--		<script type="text/javascript" src="./jcarousel/jquery-1.4.2.min.js"></script> -->
 		<!-- jCarousel skin stylesheet -->
 		<link rel="stylesheet" type="text/css" href="./jcarousel/skin.css" />
 		
 	</head>
 	<body>
+	<div id="fb-root"></div>
+
+			<script>
+			  // Additional JS functions here
+			  window.fbAsyncInit = function() {
+			    
+			    FB.init({
+			      appId      : '401152856648634', // App ID
+			      channelUrl : '//www.cancan.apphb.com/home.html', // Channel File
+
+			      status     : true, // check login status
+			      cookie     : true, // enable cookies to allow the server to access the session
+			      xfbml      : true  // parse XFBML
+			    });
+
+			    // Additional init code here
+			    FB.getLoginStatus(function(response) {
+					  if (response.status === 'connected') {
+						    // connected
+						  } else if (response.status === 'not_authorized') {
+						    login();
+						  } else {						    // not_logged_in
+						    login();
+						  }
+					 });
+			  };
+
+			  function login() {
+				    FB.login(function(response) {
+				        if (response.authResponse) {
+				            // connected
+				            self.location="Index.html"
+				        } else {
+				            self.location="Home.html"
+				        }
+				    });
+				}
+
+			  // Load the SDK Asynchronously
+			  (function(d){
+			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement('script'); js.id = id; js.async = true;
+			     js.src = "//connect.facebook.net/en_US/all.js";
+			     ref.parentNode.insertBefore(js, ref);
+			     
+			   }(document));
+			</script>
+
 	<div class="top-bar">
 		<ul>
 			<li  class="share-buttons fb"></li>
@@ -22,7 +73,6 @@
 			<li  class="share-buttons pint"></li>
 		</ul>
 	</div>
-
 
 		<div id="main-content">
 
@@ -34,6 +84,41 @@
 								<div class="handwrite left-item">DELINCUENCIA</div>
 								<div class="content-item-wrapper">
 										<ul class="content-item"> 
+											<li> 
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
+													<input type="hidden" class="item-data" value="{'sex':'W','status':'single','age':'18'}" />
+												</div>
+											 </li>
+											<li> 
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<input type="hidden" class="item-data" value="{sex:'M',status:'single',age:'18'}"
+											    </div>
+											 </li>
+											<li>
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<input type="hidden" class="item-data" value="{sex:'W',status:'single',age:'18'}"
+												</div>
+											</li>
+											<li>
+												<div class="handwrite-item">
+											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+											 		<input type="hidden" class="item-data" value="{sex:'M',status:'single',age:'18'}"
+											 	</div>
+											 </li>
+										</ul>
+								</div>
+							</div>
+							<div class="clearfix"/>
+						</li>
+						<div class="clearfix"/>
+						<li>
+							<div class="list-item"> 
+								<div class="handwrite left-item">VIOLENCIA</div>
+								<div class="content-item-wrapper">
+								<ul class="content-item"> 
 											<li> 
 												<div class="handwrite-item">
 													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
@@ -56,16 +141,6 @@
 											 	</div>
 											 </li>
 										</ul>
-								</div>
-							</div>
-							<div class="clearfix"/>
-						</li>
-						<div class="clearfix"/>
-						<li>
-							<div class="list-item"> 
-								<div class="handwrite left-item">VIOLENCIA</div>
-								<div class="content-item-wrapper">
-								
 							</div>
 							</div>
 							<div class="clearfix"/>
@@ -76,7 +151,29 @@
 							<div class="list-item">
 							<div class="handwrite left-item">INMORALIDAD</div>
 							<div class="content-item-wrapper">
-								
+								<ul class="content-item"> 
+											<li> 
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
+												</div>
+											 </li>
+											<li> 
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+
+											    </div>
+											 </li>
+											<li>
+												<div class="handwrite-item">
+													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+												</div>
+											</li>
+											<li>
+												<div class="handwrite-item">
+											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+											 	</div>
+											 </li>
+										</ul>
 							</div>
 							</div>
 							<div class="clearfix"/>
@@ -94,6 +191,9 @@
 			<div class="bottom-icons">
 
 			</div>
+		</div>
+
+		<div id="fb-test">
 		</div>
 
 </body>
@@ -131,7 +231,26 @@
 										visible: 1,
 										wrap:  "left",
 										buttonNextHTML:"<img src='rightarrow.png' style=' position:absolute; z-index:9000; display: block;float: left;margin-top: -110px; margin-left:600px'  alt='next'/>",
-										buttonPrevHTML:"<img src='leftarrow.png' style='display: block;float: right;margin-top: -110px; position:absolute; z-index:9000;' alt='next'/>"
+										buttonPrevHTML:"<img src='leftarrow.png' style='display: block;float: right;margin-top: -110px; position:absolute; z-index:9000;' alt='next'/>",
+										itemVisibleInCallback:  { 
+											   onAfterAnimation:
+											   			 function (c, o, i, s) 
+											   			 	{
+									                            //i = (i - 1) % $('#mycarousel li').size();
+									                            //jQuery('.jcarousel-control a').removeClass('active').addClass('inactive');
+									                            //jQuery('.jcarousel-control a:eq(' + i + ')').removeClass('inactive').addClass('active');
+									                            var val = $(o).find('.item-data').val().replace(/'/g, '"');
+									                            val.replace('{','"{');
+									                            val.replace('}','}"');
+									                            alert(val);
+									                            var data = $.parseJSON(val);
+									                            FB.api('/me/friends', { fields: 'name,id,location,birthday' }, function(result) {
+																  document.getElementById('fb-test').innerHTML = $parseJSON(result);
+																})
+									                            
+
+                    										}
+											}
 									});;
 										  }
 								}
