@@ -93,19 +93,19 @@
 											<li> 
 												<div class="handwrite-item">
 													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
-													<input type="hidden" class="item-data" value="{sex:'M',status:'single',age:'18'}"
+													<input type="hidden" class="item-data" value="{'sex':'M','status':'single','age':'20'}"
 											    </div>
 											 </li>
 											<li>
 												<div class="handwrite-item">
 													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
-													<input type="hidden" class="item-data" value="{sex:'W',status:'single',age:'18'}"
+													<input type="hidden" class="item-data" value="{'sex':'W','status':'single','age':'10'}"
 												</div>
 											</li>
 											<li>
 												<div class="handwrite-item">
 											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
-											 		<input type="hidden" class="item-data" value="{sex:'M',status:'single',age:'18'}"
+											 		<input type="hidden" class="item-data" value="{'sex':'M','status':'single','age':'25'}"
 											 	</div>
 											 </li>
 										</ul>
@@ -239,11 +239,11 @@
 									                            //i = (i - 1) % $('#mycarousel li').size();
 									                            //jQuery('.jcarousel-control a').removeClass('active').addClass('inactive');
 									                            //jQuery('.jcarousel-control a:eq(' + i + ')').removeClass('inactive').addClass('active');
-									                            var val = $(o).find('.item-data').val().replace(/'/g, '"');
-									                            val.replace('{','"{');
-									                            val.replace('}','}"');
-									                            alert(val);
-									                            var data = $.parseJSON(val);
+									                            //var val = $(o).find('.item-data').val().replace(/'/g, '"');
+									                            //val.replace('{','"{');
+									                            //val.replace('}','}"');
+									                            //alert(val);
+									                            //var data = $.parseJSON(val);
 									                            FB.api('/me/friends', { fields: 'name,id,location,birthday' }, function(response) {
 																  	if(response.data) {
 															            $.each(response.data,function(index,friend) {
