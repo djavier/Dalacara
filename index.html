@@ -108,11 +108,14 @@
 											 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
 											 	</div>
 											 </li>
-
-											<div class="fb-test" style="background-color:gray;">
-											</div>
-
+											
 										</ul>
+										<div class="fb-test" style="height: 54px; width: 247px;position: absolute;bottom: 266;margin-left: 10%;">
+											<!--<img src='http://graph.facebook.com/20805016/picture' alt='picture'/>
+											<img src='http://graph.facebook.com/501120070/picture' alt='picture'/>
+											<img src='http://graph.facebook.com/502178138/picture' alt='picture'/>
+											<img src='http://graph.facebook.com/503051345/picture' alt='picture'/> -->
+										</div>
 								</div>
 							</div>
 							<div class="clearfix"/>
@@ -246,7 +249,7 @@
 									                            //alert(val);
 									                            var data = $.parseJSON(val);
 
-									                            $(this).find('.fb-test img').remove();
+									                            $(this).find('.content-item-wrapper').find('.fb-test img').remove();
 
 									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
 																  	if(response.data) {
@@ -258,7 +261,7 @@
 															                 	return false;
 
 															                if (friend.gender == data.gender) {
-															                	$(this).find('.fb-test img').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+															                	$(this).find('.content-item-wrapper').find('.fb-test img').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
 															                	indexFilter++;
 															            	}
 															                 
