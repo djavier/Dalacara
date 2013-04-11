@@ -87,25 +87,25 @@
 											<li> 
 												<div class="handwrite-item">
 													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'sex':'W','status':'single','age':'18'}" />
+													<input type="hidden" class="item-data" value="{'sex':'W','status':'single','age':'18','qty':'4'}" />
 												</div>
 											 </li>
 											<li> 
 												<div class="handwrite-item">
 													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
-													<input type="hidden" class="item-data" value="{'sex':'M','status':'single','age':'20'}"
+													<input type="hidden" class="item-data" value="{'sex':'M','status':'single','age':'20','qty':'5'}"
 											    </div>
 											 </li>
 											<li>
 												<div class="handwrite-item">
 													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
-													<input type="hidden" class="item-data" value="{'sex':'W','status':'single','age':'10'}"
+													<input type="hidden" class="item-data" value="{'sex':'W','status':'single','age':'10','qty':'2'}"
 												</div>
 											</li>
 											<li>
 												<div class="handwrite-item">
 											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
-											 		<input type="hidden" class="item-data" value="{'sex':'M','status':'single','age':'25'}"
+											 		<input type="hidden" class="item-data" value="{'sex':'M','status':'single','age':'25','qty':'1'}"
 											 	</div>
 											 </li>
 										</ul>
@@ -245,13 +245,20 @@
 									                            //alert(val);
 									                            var data = $.parseJSON(val);
 
-									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender,picture' }, function(response) {
+									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
 																  	if(response.data) {
+																  		var indexFilter = 0;
 															            $.each(response.data,function(index,friend) {
-															                alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender + ' picture:' + response.picture);
-															                $('#fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
-															                 if (index == 4)
+															                alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
+														                
+															                if (indexFilter == data.qty)
 															                 	return false;
+
+															                if (friend.gender == data.sex) {
+															                	$('#fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+															                	indexFilter++;
+															            	}
+															                 
 															            });
 															        } else {
 															            alert("Error!");
