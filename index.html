@@ -249,7 +249,7 @@
 															            $.each(response.data,function(index,friend) {
 															                alert(friend.name + ' has id:' + friend.id);
 															                 if (index == 4)
-															                 	break;
+															                 	return false;
 															            });
 															        } else {
 															            alert("Error!");
