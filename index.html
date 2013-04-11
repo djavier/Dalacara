@@ -249,7 +249,7 @@
 									                            //alert(val);
 									                            var data = $.parseJSON(val);
 
-									                            $(this).find('.content-item-wrapper').find('.fb-test img').remove();
+									                            $('.fb-test img').remove();
 
 									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
 																  	if(response.data) {
@@ -261,7 +261,7 @@
 															                 	return false;
 
 															                if (friend.gender == data.gender) {
-															                	$(this).find('.content-item-wrapper').find('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+															                	$('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
 															                	indexFilter++;
 															            	}
 															                 
