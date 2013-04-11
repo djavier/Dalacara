@@ -108,6 +108,10 @@
 											 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
 											 	</div>
 											 </li>
+
+											<div class="fb-test" style="background-color:gray;">
+											</div>
+
 										</ul>
 								</div>
 							</div>
@@ -193,9 +197,6 @@
 			</div>
 		</div>
 
-		<div id="fb-test">
-		</div>
-
 </body>
 	<script type="text/javascript">
  
@@ -245,6 +246,8 @@
 									                            //alert(val);
 									                            var data = $.parseJSON(val);
 
+									                            $(this).find('.fb-test img').remove();
+
 									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
 																  	if(response.data) {
 																  		var indexFilter = 0;
@@ -255,7 +258,7 @@
 															                 	return false;
 
 															                if (friend.gender == data.gender) {
-															                	$('#fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+															                	$(this).find('.fb-test img').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
 															                	indexFilter++;
 															            	}
 															                 
