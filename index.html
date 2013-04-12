@@ -65,15 +65,17 @@
 			   }(document));
 			</script>
 
-	<div class="top-bar">
-		<ul>
-			<li  class="share-buttons fb"></li>
-			<li  class="share-buttons tw"></li>
-			<li  class="share-buttons gplus"></li>
-			<li  class="share-buttons pint"></li>
-		</ul>
+<div id="wrapper">
+	<div id="top-bar-wrapper" class="fixed"> 
+		<div class="top-bar">
+			<ul>
+				<li  class="share-buttons fb"></li>
+				<li  class="share-buttons tw"></li>
+				<li  class="share-buttons gplus"></li>
+				<li  class="share-buttons pint"></li>
+			</ul>
+		</div>
 	</div>
-
 		<div id="main-content">
 
 			<div id="list-content" > 
@@ -199,6 +201,7 @@
 
 			</div>
 		</div>
+	</div>
 
 </body>
 	<script type="text/javascript">
@@ -212,21 +215,21 @@
 				//$(this).find('.list-item').animate({height:"125px"},'slow');
 				
 				//hide item and set bg after hides completes
-				$(this).hide('clip','slow',function(){bg(this);});
+				//$(this).hide('clip',1,function(){bg(this);});
 				//$(this).find('.list-item').hide();
 				//$(this).find('.list-item').addClass('list-item-selected');
 				//$(this).find('.list-item').find('.handwrite').addClass('left-item-selected');
 				//setTimeout(show(this), 3000);
 				//$(this).show();//.animate({height:"125px"},{duration:'slow', easing:'easeInOutElastic'});
-				$(this).show("clip",200);
+				$(this).show("clip",50);
 				$(this).animate(
 						{marginTop:"25px", marginBottom:"25px"},
-						{duration:'slow', 
+						{duration:50, 
 						 easing:'easeInOutCirc', 
 						 done: function() { 
-								$(this).find('.list-item').addClass ("list-item-selected",1000);
-								$(this).find('.list-item').find('.handwrite').addClass("left-item-selected",1000);
-								$(this).find('.list-item').find('.content-item-wrapper').show('clip','slow');
+								$(this).find('.list-item').addClass ("list-item-selected",200);
+								$(this).find('.list-item').find('.handwrite').addClass("left-item-selected",200);
+								$(this).find('.list-item').find('.content-item-wrapper').show('fade',1000);
 								$(this).find('.list-item').find('.content-item').jcarousel(
 									{
 										//Carousel configuration goes here
@@ -234,8 +237,8 @@
 										scroll : 1,
 										visible: 1,
 										wrap:  "left",
-										buttonNextHTML:"<img src='rightarrow.png' style=' position:absolute; z-index:9000; display: block;float: left;margin-top: -110px; margin-left:600px'  alt='next'/>",
-										buttonPrevHTML:"<img src='leftarrow.png' style='display: block;float: right;margin-top: -110px; position:absolute; z-index:9000;' alt='next'/>",
+										buttonNextHTML:"<div  class='rightarrow' alt='next'/>",
+										buttonPrevHTML:"<div class='leftarrow' alt='next'/>",
 										itemVisibleInCallback:  { 
 											   onAfterAnimation:
 											   			 function (c, o, i, s) 
@@ -288,8 +291,8 @@
 
 			function bg(elem)
 			{
-				$(elem).find('.list-item').css("background-image","url('horizontal-band.png')");
-				$(elem).find('.list-item').css("color","white");
+				//$(elem).find('.list-item').css("background-image","url('horizontal-band.png')");
+				//$(elem).find('.list-item').css("color","white");
 			}
 		});
 	</script>
