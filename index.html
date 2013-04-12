@@ -264,8 +264,8 @@
 															                 	return false;
 
 															                if (friend.gender == data.gender) {
-															                	alert($(this).html());
-															                	$('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+															                	//alert($('.list-item-selected').html());
+															                	$('.list-item-selected').find('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
 															                	indexFilter++;
 															            	}
 															                 
