@@ -258,7 +258,7 @@
 																  	if(response.data) {
 																  		var indexFilter = 0;
 																  		var position = $('.list-item-selected').position();
-																  		$('.list-item-selected').find('.fb-test').css('top', position.top);
+																  		$('.list-item-selected').find('.fb-test').css('top', position.top - 60);
 
 															            $.each(response.data,function(index,friend) {
 															                //alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
