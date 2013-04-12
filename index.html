@@ -118,7 +118,7 @@
 							</div>
 							<div class="clearfix"/>
 						</li>
-						<div class="clearfix"/>
+						<div class="clearfix"> </div>
 						<li>
 							<div class="list-item"> 
 								<div class="handwrite left-item">VIOLENCIA</div>
@@ -157,7 +157,7 @@
 							<div class="clearfix"/>
 							
 						</li>
-						<div class="clearfix"/>
+						<div class="clearfix"> </div>
 						<li >
 							<div class="list-item">
 							<div class="handwrite left-item">INMORALIDAD</div>
@@ -195,6 +195,7 @@
 							</div>
 							<div class="clearfix"/>
 						</li>
+						<div class="clearfix"> </div>
 					</ul>
 				</div>
 			</div>
@@ -219,16 +220,16 @@
 			$("#list-content ul li").click(function(event){
 				event.preventDefault();
 				
-				//$(this).find('.list-item').effect('clip','slow')		
-				//$(this).find('.list-item').animate({height:"125px"},'slow');
 				
-				//hide item and set bg after hides completes
-				//$(this).hide('clip',1,function(){bg(this);});
-				//$(this).find('.list-item').hide();
-				//$(this).find('.list-item').addClass('list-item-selected');
-				//$(this).find('.list-item').find('.handwrite').addClass('left-item-selected');
-				//setTimeout(show(this), 3000);
-				//$(this).show();//.animate({height:"125px"},{duration:'slow', easing:'easeInOutElastic'});
+				  if ($('.list-item-selected').size() > 0){
+				  	$('.list-item-selected').find('.content-item-wrapper').hide('fade',100);
+				  	$('.list-item-selected').find('.left-item-selected').removeClass("left-item-selected");
+				  	$('.list-item-selected').removeClass("list-item-selected");
+
+				  }
+
+
+
 				$(this).show("clip",50);
 				$(this).animate(
 						{marginTop:"25px", marginBottom:"25px"},
@@ -293,19 +294,10 @@
 										  }
 								}
 					);
-				//$(this).find('.list-item').show();
-				
-				//animate(
-					//											   {fontSize: "65px"},      																			  style='display: block;float: right;margin-top: -110px;'
-						//										   100); 
+
 			    $(this).off('click');
 			});
 
-			function bg(elem)
-			{
-				//$(elem).find('.list-item').css("background-image","url('horizontal-band.png')");
-				//$(elem).find('.list-item').css("color","white");
-			}
 		});
 	</script>
 </html>
