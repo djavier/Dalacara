@@ -257,6 +257,9 @@
 									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
 																  	if(response.data) {
 																  		var indexFilter = 0;
+																  		var position = $('.list-item-selected').position();
+																  		$('.list-item-selected').find('.fb-test').css('top', positon.top);
+
 															            $.each(response.data,function(index,friend) {
 															                //alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
 														                
