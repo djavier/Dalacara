@@ -88,31 +88,31 @@
 										<ul class="content-item"> 
 											<li> 
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
 												</div>
 											 </li>
 											<li> 
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 													<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'5'}"
 											    </div>
 											 </li>
 											<li>
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'10','qty':'2'}"
 												</div>
 											</li>
 											<li>
 												<div class="handwrite-item">
-											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+											 		<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 											 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
 											 	</div>
 											 </li>
 											
 										</ul>
-										<div class="fb-test" style="height: auto;position: absolute;top: 260;margin-left: 10%; width:auto;">
+										<div class="fb-test">
 											<!--<img src='http://graph.facebook.com/20805016/picture' alt='picture'/>
 											<img src='http://graph.facebook.com/501120070/picture' alt='picture'/>
 											<img src='http://graph.facebook.com/502178138/picture' alt='picture'/>
@@ -130,23 +130,23 @@
 								<ul class="content-item"> 
 											<li> 
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 												</div>
 											 </li>
 											<li> 
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 
 											    </div>
 											 </li>
 											<li>
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 												</div>
 											</li>
 											<li>
 												<div class="handwrite-item">
-											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+											 		<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 											 	</div>
 											 </li>
 										</ul>
@@ -163,23 +163,23 @@
 								<ul class="content-item"> 
 											<li> 
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span>
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 												</div>
 											 </li>
 											<li> 
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 
 											    </div>
 											 </li>
 											<li>
 												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 												</div>
 											</li>
 											<li>
 												<div class="handwrite-item">
-											 		<span> PARA EL FINAL DE ESTE DIA <RED> 4 MUJERES </RED> SERAN VIOLADAS  </span> 
+											 		<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
 											 	</div>
 											 </li>
 										</ul>
@@ -264,7 +264,8 @@
 															                 	return false;
 
 															                if (friend.gender == data.gender) {
-															                	$('.fb-test').append("<img style='padding:5px;' src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+															                	alert($(this).html());
+															                	$('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
 															                	indexFilter++;
 															            	}
 															                 
