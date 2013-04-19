@@ -122,14 +122,14 @@ body .bottom-bar{
 }
 
 .bottom-footer-info span.big {
-font-size:12px;
+font-size:10px;
 }
 
 .bottom-footer-info span.small{
-	font-size:8px;	
+	font-size:6px;	
 }
 .bottom-footer-info span.separator {
-padding:0 12px;
+padding:0 8px;
 
 }
 
@@ -331,6 +331,10 @@ background-position: 0 96px;
 	background-color: gray;
 }
 
+.fb-pic-list {
+height:80%;
+padding:10px;
+}
 .fb-test{ 
 	height: auto;
 	position: absolute;
