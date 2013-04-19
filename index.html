@@ -53,26 +53,6 @@
 				    });
 				}
 				
-			 function postToFeed() {
-
-				// calling the API ...
-				var obj = {
-				  method: 'feed',
-				  redirect_uri: 'http://darlacara.net',
-				  link: 'http://darlacara.net',
-				  picture: 'http://darlacara.apphb.com/loginFB.png',
-				  name: 'Da la cara',
-				  caption: '',
-				  description: 'CUALQUIERA DE TUS AMIGAS PODRIA SER VÍCTIMA DE MALTRATO ENFRENTA EL PROBLEMA Y DA LA CARA POR ELLAS.'
-				};
-
-				function callback(response) {
-				  //document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-				}
-
-				FB.ui(obj, callback);
-			}
-
 	  };
 
 			  
@@ -170,7 +150,17 @@
 										<span> Y ADVIERTE A TUS AMIGAS </span> 
 								</div>
 								<div class="inside middle-text ">
-									<a class="login-button" target=”_blank” onclick="postToFeed(); return false;"></a>
+									<a class="login-button" target=”_blank” href="
+									https://www.facebook.com/dialog/feed?
+									  app_id=401152856648634&
+									  link=http://darlacara.net&
+									  picture=http://darlacara.apphb.com/fav.png&
+									  name=Da%20La%20Cara&
+									  caption=Por%20los%20problemas%20de%20tu%20pa&#205;s&
+									  description=CUALQUIERA%20DE%20TUS%20AMIGAS%20PODRIA%20SER%20V&#205;CTIMA%20DE%20MALTRATO, 
+ENFRENTA%20EL%20PROBLEMA%20Y%20DA%20LA%20CARA%20POR%20ELLAS.&
+									  redirect_uri=http://darlacara.apphb.com/index.html"
+									></a>
 									
 								</div>
 
@@ -206,9 +196,12 @@
 </body>
 	<script type="text/javascript">
  
+ 
+ 
 		$(function(){ 
 
-			//login(); 
+			
+
 			
 			$('.content-item-wrapper').jcarousel(
 					{
