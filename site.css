@@ -248,10 +248,10 @@ div .login-button:hover{
 }
 
 .higher {
-	font-size: 35px;
+	font-size: 32px;
 }
 .lower {
-	font-size: 25px;
+	font-size: 23px;
 }
 
 
@@ -328,8 +328,8 @@ background-position: 0 96px;
 #fb-pics {
 	width:100%;
 	height:100px;
-	background-color: gray;
 	margin: 0 auto;
+	text-align:center;
 }
 
 .fb-pic-list {
