@@ -212,7 +212,7 @@ div .red {
 	color:#ff0000;
 }
 
-div .login-button
+.login-button
 {
 	margin: 0 auto;
 	width:103px;
@@ -222,9 +222,10 @@ div .login-button
 	display:block;
 }
 
-div .login-button:hover{
-	/*background-position:  0 102;*/
-	/*height: 163px;*/
+.login-button:hover{
+	background-position:  0 102;
+	height: 103px;
+	cursor: pointer;
 }
 
 .handwrite {
@@ -335,6 +336,9 @@ background-position: 0 96px;
 .fb-pic-list {
 height:80%;
 padding:10px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
 }
 .fb-test{ 
 	height: auto;

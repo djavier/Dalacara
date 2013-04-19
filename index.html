@@ -52,8 +52,28 @@
 				        }
 				    });
 				}
+				
+			 function postToFeed() {
 
-			  };
+				// calling the API ...
+				var obj = {
+				  method: 'feed',
+				  redirect_uri: 'http://darlacara.net',
+				  link: 'http://darlacara.net',
+				  picture: 'http://darlacara.apphb.com/loginFB.png',
+				  name: 'Da la cara',
+				  caption: '',
+				  description: 'CUALQUIERA DE TUS AMIGAS PODRIA SER VÍCTIMA DE MALTRATO ENFRENTA EL PROBLEMA Y DA LA CARA POR ELLAS.'
+				};
+
+				function callback(response) {
+				  //document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+				}
+
+				FB.ui(obj, callback);
+			}
+
+	  };
 
 			  
 			  // Load the SDK Asynchronously
@@ -103,7 +123,7 @@
 											<span class="higher"> PARA EL FINAL DE ESTE D&#205;A </span>
 											</br>
 											<span class="higher"> <span class="red"> 4 MUJERES </span> SERAN VIOLADAS. </span>
-											<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'4'}"
+											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'20','qty':'4'}"
 									    </div>
 									 </li>
 									<li>
@@ -150,7 +170,8 @@
 										<span> Y ADVIERTE A TUS AMIGAS </span> 
 								</div>
 								<div class="inside middle-text ">
-									<div class="login-button" ></div>
+									<a class="login-button" target=”_blank” onclick="postToFeed(); return false;"></a>
+									
 								</div>
 
 						</div> 
