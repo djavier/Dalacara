@@ -36,14 +36,13 @@
 					  if (response.status === 'connected') {
 						    // connected
 						  } else if (response.status === 'not_authorized') {
-						    //login();
+						    login();
 						  } else {						    // not_logged_in
-						    //login();
+						    login();
 						  }
 					 });
-			  };
-
-			  function login() {
+					 
+  			 function login() {
 				    FB.login(function(response) {
 				        if (response.authResponse) {
 				            // connected
@@ -54,6 +53,9 @@
 				    });
 				}
 
+			  };
+
+			  
 			  // Load the SDK Asynchronously
 			  (function(d){
 			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
