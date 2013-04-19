@@ -36,9 +36,9 @@
 					  if (response.status === 'connected') {
 						    // connected
 						  } else if (response.status === 'not_authorized') {
-						    //login();
+						    login();
 						  } else {						    // not_logged_in
-						    //login();
+						    login();
 						  }
 					 });
 			  };
@@ -59,7 +59,7 @@
 			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 			     if (d.getElementById(id)) {return;}
 			     js = d.createElement('script'); js.id = id; js.async = true;
-			     js.src = "a//connect.facebook.net/en_US/all.js";
+			     js.src = "http://connect.facebook.net/en_US/all.js";
 			     ref.parentNode.insertBefore(js, ref);
 			     
 			   }(document));
@@ -90,23 +90,23 @@
 								<ul class="content-item"> 
 									<li> 
 										<div class="handwrite-item">
-											<span class="higher"> CUALQUIERA DE TUS AMIGAS PODRIA SER <span class="red"> VÌCTIMA </span> DE MALTRATO  </span>
+											<span class="higher"> CUALQUIERA DE TUS AMIGAS PODRIA SER <span class="red"> V&#205;CTIMA </span> DE MALTRATO  </span>
 											</br>
 											<span class="lower"> ENFRENTA EL PROBLEMA Y DA LA CARA  POR ELLAS.</span>
-											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
+											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'0'}" />
 										</div>
 									 </li>
 									<li> 
 										<div class="handwrite-item">
-											<span class="higher"> PARA EL FINAL DE ESTE DÌA </span>
+											<span class="higher"> PARA EL FINAL DE ESTE D&#205;A </span>
 											</br>
 											<span class="higher"> <span class="red"> 4 MUJERES </span> SERAN VIOLADA. </span>
-											<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'5'}"
+											<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'4'}"
 									    </div>
 									 </li>
 									<li>
 										<div class="handwrite-item">
-											<span class="higher"> CADA DÌA SE REPORTAN AL MENOS </span>
+											<span class="higher"> CADA D&#205;A SE REPORTAN AL MENOS </span>
 											</br>
 											<span class="higher"> <span class="red"> 2 CASOS </span> DE MALTRATO HACIA UNA MUJER. </span>
 											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'10','qty':'2'}"
@@ -117,7 +117,7 @@
 									 		<span class="higher"> ALREDEDOR DE <span class="red"> 3 MUJERES </span> SON REFERIDAS  </span>
 											</br>
 											<span class="higher">  A TERAPIA POR MALTRATO, DIARIAMENTE. </span>
-									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 		<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'25','qty':'3'}"
 									 	</div>
 									 </li>
 									 <li>
@@ -125,7 +125,7 @@
 									 		<span class="higher"> <span class="red">7</span> DE CADA 10 <span class="red"> MUJERES </span></span>
 											</br>
 											<span class="higher">  EXPERIMENTAN ALGUN TIPO DE MALTRATO DURANTE SU VIDA </span>
-									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 		<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'25','qty':'7'}"
 									 	</div>
 									 </li>
 									 <li>
@@ -133,7 +133,7 @@
 									 		<span class="lower"> EN LOS ULTIMOS 5 A—OS APROXIMADAMENTE <span class="red">600 MUJERES</span> HAN MUERTO A MANO DE SUS ESPOSOS.</span>
 											</br>
 											<span class="higher"> ESTO INDICA QUE AL MENOS <span class="red"> 10 MUJERES </span> PUEDEN LLEGAR A MORIR CADA MES</span>
-									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 		<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'25','qty':'10'}"
 									 	</div>
 									 </li>
 
@@ -161,15 +161,15 @@
 	
 		<div class="bottom-bar">
 		<div class="bottom-footer-info"> 
-				<span class="big">ESTE SITIO WEB ES INDEPENDIENTE Y SIN FINES DE LUCRO, Y S”LO TIENE COMO OBJETIVO, EL CONOCIMIENTO GENERAL DE PROBLEMAS NACIONALES QUE NOS AFECTAN.</span>
+				<span class="big">ESTE SITIO WEB ES INDEPENDIENTE Y SIN FINES DE LUCRO, Y S&#211;LO TIENE COMO OBJETIVO, EL CONOCIMIENTO GENERAL DE PROBLEMAS NACIONALES QUE NOS AFECTAN.</span>
 				</br>
-				<span class="big">NO SE BUSCAN FIRMAS, DONACIONES, NI NADA DE TI, S”LO QUE AYUDES A PROPAGAR EL MENSAJE</span>
+				<span class="big">NO SE BUSCAN FIRMAS, DONACIONES, NI NADA DE T&#205;, S&#211;LO QUE AYUDES A PROPAGAR EL MENSAJE</span>
 				</br>
-				<span class="small">ESTADÕSTICAS DE LA ORGANIZACI”N CÕVICA PARTICIPACION CIUDADANA </span>
+				<span class="small">ESTAD&#205;STICAS DE LA ORGANIZACI&#211;N C&#205;VICA PARTICIPACION CIUDADANA </span>
 				<span class="separator small">*</span>
 				<span class="small">SISTEMA NACIONAL SENSITIVO ONE</span>
 				<span class="separator small">*</span>
-				<span class="small">SECRETARIA DE ESTADO DE LA MUJER BOLETINES Y ESTADISTICAS 2013</span>
+				<span class="small">SECRETAR&#205;A DE ESTADO DE LA MUJER BOLETINES Y ESTAD&#205;STICAS 2013</span>
 				
 			</div>
 			<div class="bottom-icons">
@@ -185,11 +185,8 @@
  
 		$(function(){ 
 
-			$(".tw").click( function(event)
-				{
-				//$(".tw #a").trigger('click');
-				});
-
+			login(); 
+			
 			$('.content-item-wrapper').jcarousel(
 					{
 						//Carousel configuration goes here
@@ -204,20 +201,20 @@
 							   			 function (c, o, i, s) 
 							   			 	{
 
-					                            /*var val = $(o).find('.item-data').val().replace(/'/g, '"');
+					                            var val = $(o).find('.item-data').val().replace(/'/g, '"');
 					                            val.replace('{','"{');
 					                            val.replace('}','}"');
 					                            
 					                            var data = $.parseJSON(val);
-
-					                            $('#fb-pic img').remove();/*
+												alert(data.qty);
+					                            $('#fb-pics img').remove();
 
 					                            //-------------------------------------------------
-					                            /*FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
+					                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
 												  	if(response.data) {
 												  		var indexFilter = 0;
 												  		var position = $('.list-item-selected').position();
-												  		$('.list-item-selected').find('.fb-test').css('top', position.top - 60);
+												  		//$('.list-item-selected').find('.fb-test').css('top', position.top - 60);
 
 											            $.each(response.data,function(index,friend) {
 											                //alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
@@ -227,7 +224,7 @@
 
 											                if (friend.gender == data.gender) {
 											                	//alert($('.list-item-selected').html());
-											                	$('.list-item-selected').find('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+											                	$('#fb-pics').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
 											                	indexFilter++;
 											            	}
 											                 
@@ -235,7 +232,7 @@
 											        } else {
 											            alert("Error!");
 											        }
-												});*/
+												});
 					                            
 
 											}
