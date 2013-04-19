@@ -1,11 +1,12 @@
 html, body {
-	height: 100%;
+	height: 650px;
 	background-color:white;	
 	margin:0px;
 }
 
 #wrapper {
 	width:1060px;
+	height: auto;
 	margin:0 auto;
 }
 
@@ -92,7 +93,11 @@ body .top-bar {
 }
 
 body .bottom-bar{
-	position: relative;
+	position: fixed;
+	left: 05%;
+	top: 85%;
+	font-family: 'Patrick Hand SC';
+	width:100%;
 }
 
 .fixed {
@@ -100,11 +105,32 @@ body .bottom-bar{
 	top:0;
 }
 
-.bottom-bar .bottom-icons{
-	margin:0 auto;
+.bottom-icons{
+	
+		
 	width:600px;
 	height:60px;
 	background: url('footericons.png') no-repeat;
+	float:left;
+}
+
+.bottom-footer-info  {
+	
+	float:right;
+	margin-right:140px;
+	text-align:right;
+}
+
+.bottom-footer-info span.big {
+font-size:12px;
+}
+
+.bottom-footer-info span.small{
+	font-size:8px;	
+}
+.bottom-footer-info span.separator {
+padding:0 12px;
+
 }
 
 .MainWrapper {
@@ -117,14 +143,13 @@ body .bottom-bar{
 
 #main-content {
 	width:100%;
-	
+	min-width: 1060px;
 	margin-top:150px; 
 	margin-bottom:150px;
 }
 
 #list-content {
-	margin-top:250px;
-	height: 250px;	
+	height: 450px;	
 }
 
 #list-content ul {
@@ -140,10 +165,10 @@ body .bottom-bar{
 	
 #list-content .content-item-wrapper{
 	
-	width:800px;
-	height:125px;
+	width:100%;
+	height:135px;
 	float: right;
-	display:none;
+	/*display:none;*/
 	overflow:hidden;
 	/*background-color: gray;*/
 }
@@ -176,6 +201,7 @@ div .inside {
 }
 
 div .middle-text{
+	margin: 0 auto;
 	text-align: center;
 	padding:10px;
 	font-family: 'Patrick Hand SC';
@@ -186,18 +212,19 @@ div .red {
 	color:#ff0000;
 }
 
-a.login-button
+div .login-button
 {
-	margin-left: 25%;
-	width:165px;
-	height: 165px;
+	margin: 0 auto;
+	width:103px;
+	height: 103px;
 	background:url('LoginFB.png') 0 0;
+	background-size:103px;
 	display:block;
 }
 
-a.login-button:hover{
-	background-position:  0 163;
-	height: 163px;
+div .login-button:hover{
+	/*background-position:  0 102;*/
+	/*height: 163px;*/
 }
 
 .handwrite {
@@ -209,17 +236,28 @@ a.login-button:hover{
 .handwrite-item {
 	font-family: 'Patrick Hand SC';
 	text-align: center;
-	
-	margin:5% auto;
+	margin-top:2%;
 	/*font-size: 30px;*/
 	/*padding-top: 8%;
 	padding-left: 40%;*/
 }
 
+.handwrite-item span {
+	text-align: center;
+
+}
+
+.higher {
+	font-size: 35px;
+}
+.lower {
+	font-size: 25px;
+}
+
 
 .center-item
 {
-
+margin: 0 auto;
 }
 
 .left-item
@@ -276,7 +314,7 @@ background-position: 0 96px;
 	display: block;
 	float: right;
 	margin-top: -110px;
-	margin-left: 750px;
+	margin-left: 1010px;
 	background-image:url('rightarrow.png');
 	height:99px;
 	width:49px;
@@ -285,6 +323,12 @@ background-position: 0 96px;
 
 .rightarrow:hover {
 	background-position: 0 96px;
+}
+
+#fb-pics {
+	width:100%;
+	height:100px;
+	background-color: gray;
 }
 
 .fb-test{ 

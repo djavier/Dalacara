@@ -36,9 +36,9 @@
 					  if (response.status === 'connected') {
 						    // connected
 						  } else if (response.status === 'not_authorized') {
-						    login();
+						    //login();
 						  } else {						    // not_logged_in
-						    login();
+						    //login();
 						  }
 					 });
 			  };
@@ -59,7 +59,7 @@
 			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 			     if (d.getElementById(id)) {return;}
 			     js = d.createElement('script'); js.id = id; js.async = true;
-			     js.src = "//connect.facebook.net/en_US/all.js";
+			     js.src = "a//connect.facebook.net/en_US/all.js";
 			     ref.parentNode.insertBefore(js, ref);
 			     
 			   }(document));
@@ -83,138 +83,100 @@
 		</div>
 	</div>
 		<div id="main-content">
-
 			<div id="list-content" > 
-				<div class="center-item">
-					<ul>
-						<li>
-							<div class="list-item">
-								<div class="handwrite left-item">DELINCUENCIA</div>
-								<div class="content-item-wrapper">
-										<ul class="content-item"> 
-											<li> 
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-												</div>
-											 </li>
-											<li> 
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'5'}"
-											    </div>
-											 </li>
-											<li>
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'10','qty':'2'}"
-												</div>
-											</li>
-											<li>
-												<div class="handwrite-item">
-											 		<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-											 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
-											 	</div>
-											 </li>
-											
-										</ul>
-										<div class="fb-test">
+				<div>	
+						<div id="fb-pics"> </div>			
+						<div class="content-item-wrapper">
+								<ul class="content-item"> 
+									<li> 
+										<div class="handwrite-item">
+											<span class="higher"> CUALQUIERA DE TUS AMIGAS PODRIA SER <span class="red"> VÌCTIMA </span> DE MALTRATO  </span>
+											</br>
+											<span class="lower"> ENFRENTA EL PROBLEMA Y DA LA CARA  POR ELLAS.</span>
+											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
 										</div>
+									 </li>
+									<li> 
+										<div class="handwrite-item">
+											<span class="higher"> PARA EL FINAL DE ESTE DÌA </span>
+											</br>
+											<span class="higher"> <span class="red"> 4 MUJERES </span> SERAN VIOLADA. </span>
+											<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'5'}"
+									    </div>
+									 </li>
+									<li>
+										<div class="handwrite-item">
+											<span class="higher"> CADA DÌA SE REPORTAN AL MENOS </span>
+											</br>
+											<span class="higher"> <span class="red"> 2 CASOS </span> DE MALTRATO HACIA UNA MUJER. </span>
+											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'10','qty':'2'}"
+										</div>
+									</li>
+									<li>
+										<div class="handwrite-item">
+									 		<span class="higher"> ALREDEDOR DE <span class="red"> 3 MUJERES </span> SON REFERIDAS  </span>
+											</br>
+											<span class="higher">  A TERAPIA POR MALTRATO, DIARIAMENTE. </span>
+									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 	</div>
+									 </li>
+									 <li>
+										<div class="handwrite-item">
+									 		<span class="higher"> <span class="red">7</span> DE CADA 10 <span class="red"> MUJERES </span></span>
+											</br>
+											<span class="higher">  EXPERIMENTAN ALGUN TIPO DE MALTRATO DURANTE SU VIDA </span>
+									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 	</div>
+									 </li>
+									 <li>
+										<div class="handwrite-item">
+									 		<span class="lower"> EN LOS ULTIMOS 5 A—OS APROXIMADAMENTE <span class="red">600 MUJERES</span> HAN MUERTO A MANO DE SUS ESPOSOS.</span>
+											</br>
+											<span class="higher"> ESTO INDICA QUE AL MENOS <span class="red"> 10 MUJERES </span> PUEDEN LLEGAR A MORIR CADA MES</span>
+									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 	</div>
+									 </li>
+
+									
+								</ul> 
+						</div>
+						<div class="clearfix"/>
+						<div class="center-item"> 
+								<div class="inside middle-text ">
+										<span class="red"> DA LA CARA </span> 
+										</br>
+										<span> Y ADVIERTE A TUS AMIGAS </span> 
 								</div>
-							</div>
-							<div class="clearfix"/>
-						</li>
-						<div class="clearfix"> </div>
-						<li>
-							<div class="list-item"> 
-								<div class="handwrite left-item">VIOLENCIA</div>
-								<div class="content-item-wrapper">
-								<ul class="content-item"> 
-											<li> 
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-												</div>
-											 </li>
-											<li> 
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
+								<div class="inside middle-text ">
+									<div class="login-button" ></div>
+								</div>
 
-											    </div>
-											 </li>
-											<li>
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-												</div>
-											</li>
-											<li>
-												<div class="handwrite-item">
-											 		<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-											 		<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-											 	</div>
-											 </li>
-										</ul>
-										<div class="fb-test">
-										</div>
-							</div>
-							</div>
-							<div class="clearfix"/>
-							
-						</li>
-						<div class="clearfix"> </div>
-						<li >
-							<div class="list-item">
-							<div class="handwrite left-item">INMORALIDAD</div>
-							<div class="content-item-wrapper">
-								<ul class="content-item"> 
-											<li> 
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-												</div>
-											 </li>
-											<li> 
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-
-											    </div>
-											 </li>
-											<li>
-												<div class="handwrite-item">
-													<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-													<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-												</div>
-											</li>
-											<li>
-												<div class="handwrite-item">
-											 		<span> PARA EL FINAL DE ESTE DIA, <span class="red"> 4 MUJERES </span> SERAN VIOLADAS  </span>
-											 		<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
-											 	</div>
-											 </li>
-										</ul>
-										<div class="fb-test">
-										</div>
-							</div>
-							</div>
-							<div class="clearfix"/>
-						</li>
-						<div class="clearfix"> </div>
-					</ul>
+						</div> 
+						
 				</div>
 			</div>
-
-
 		</div>
 	
 
 	
 		<div class="bottom-bar">
+		<div class="bottom-footer-info"> 
+				<span class="big">ESTE SITIO WEB ES INDEPENDIENTE Y SIN FINES DE LUCRO, Y S”LO TIENE COMO OBJETIVO, EL CONOCIMIENTO GENERAL DE PROBLEMAS NACIONALES QUE NOS AFECTAN.</span>
+				</br>
+				<span class="big">NO SE BUSCAN FIRMAS, DONACIONES, NI NADA DE TI, S”LO QUE AYUDES A PROPAGAR EL MENSAJE</span>
+				</br>
+				<span class="small">ESTADÕSTICAS DE LA ORGANIZACI”N CÕVICA PARTICIPACION CIUDADANA </span>
+				<span class="separator small">*</span>
+				<span class="small">SISTEMA NACIONAL SENSITIVO ONE</span>
+				<span class="separator small">*</span>
+				<span class="small">SECRETARIA DE ESTADO DE LA MUJER BOLETINES Y ESTADISTICAS 2013</span>
+				
+			</div>
 			<div class="bottom-icons">
 
 			</div>
+			
+			<div class="clearfix"/>
 		</div>
 	</div>
 
@@ -228,88 +190,57 @@
 				//$(".tw #a").trigger('click');
 				});
 
-			$("#list-content ul li").click(function(event){
-				event.preventDefault();
-				
-				
-				  if ($('.list-item-selected').size() > 0){
-				  	$('.list-item-selected').find('.content-item-wrapper').hide('fade',100);
-				  	$('.list-item-selected').find('.left-item-selected').removeClass("left-item-selected");
-				  	//$('.list-item-selected').parent().on('click',null,null,function(event){ handler($(this));})
-				  	$('.list-item-selected').removeClass("list-item-selected");
-				  	//event.stopPropagation();
-				  }else{
-				  	//$('.list-item-selected').parent().on('click',null,null,function(event){ handler($(this));})
-				  }
+			$('.content-item-wrapper').jcarousel(
+					{
+						//Carousel configuration goes here
+						//Doc @ http://sorgalla.com/projects/jcarousel/
+						scroll : 1,
+						visible: 1,
+						wrap:  "both",
+						buttonNextHTML:"<div class='rightarrow' alt='next'/>",
+						buttonPrevHTML:"<div class='leftarrow' alt='next'/>",
+						itemVisibleInCallback:  { 
+							   onAfterAnimation:
+							   			 function (c, o, i, s) 
+							   			 	{
 
+					                            /*var val = $(o).find('.item-data').val().replace(/'/g, '"');
+					                            val.replace('{','"{');
+					                            val.replace('}','}"');
+					                            
+					                            var data = $.parseJSON(val);
 
+					                            $('#fb-pic img').remove();/*
 
-				$(this).show("clip",50);
-				$(this).animate(
-						{marginTop:"25px", marginBottom:"25px"},
-						{duration:50, 
-						 easing:'easeInOutCirc', 
-						 done: function() { 
-								$(this).find('.list-item').addClass ("list-item-selected",200);
-								$(this).find('.list-item').find('.handwrite').addClass("left-item-selected",200);
-								$(this).find('.list-item').find('.content-item-wrapper').show('fade',1000);
-								$(this).find('.list-item').find('.content-item').jcarousel(
-									{
-										//Carousel configuration goes here
-										//Doc @ http://sorgalla.com/projects/jcarousel/
-										scroll : 1,
-										visible: 1,
-										wrap:  "left",
-										buttonNextHTML:"<div  class='rightarrow' alt='next'/>",
-										buttonPrevHTML:"<div class='leftarrow' alt='next'/>",
-										itemVisibleInCallback:  { 
-											   onAfterAnimation:
-											   			 function (c, o, i, s) 
-											   			 	{
+					                            //-------------------------------------------------
+					                            /*FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
+												  	if(response.data) {
+												  		var indexFilter = 0;
+												  		var position = $('.list-item-selected').position();
+												  		$('.list-item-selected').find('.fb-test').css('top', position.top - 60);
 
-									                            var val = $(o).find('.item-data').val().replace(/'/g, '"');
-									                            val.replace('{','"{');
-									                            val.replace('}','}"');
-									                            
-									                            var data = $.parseJSON(val);
+											            $.each(response.data,function(index,friend) {
+											                //alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
+										                
+											                if (indexFilter == data.qty)
+											                 	return false;
 
-									                            $('.fb-test img').remove();
+											                if (friend.gender == data.gender) {
+											                	//alert($('.list-item-selected').html());
+											                	$('.list-item-selected').find('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+											                	indexFilter++;
+											            	}
+											                 
+											            });
+											        } else {
+											            alert("Error!");
+											        }
+												});*/
+					                            
 
-									                            FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
-																  	if(response.data) {
-																  		var indexFilter = 0;
-																  		var position = $('.list-item-selected').position();
-																  		$('.list-item-selected').find('.fb-test').css('top', position.top - 60);
-
-															            $.each(response.data,function(index,friend) {
-															                //alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
-														                
-															                if (indexFilter == data.qty)
-															                 	return false;
-
-															                if (friend.gender == data.gender) {
-															                	//alert($('.list-item-selected').html());
-															                	$('.list-item-selected').find('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
-															                	indexFilter++;
-															            	}
-															                 
-															            });
-															        } else {
-															            alert("Error!");
-															        }
-																});
-									                            
-
-                    										}
 											}
-									});;
-										  }
-								}
-					);
-
-			    //$(this).off('click');
-			});
-
+							}
+					});
 
 		});
 	</script>

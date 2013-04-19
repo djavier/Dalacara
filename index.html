@@ -5,9 +5,18 @@
 		<link href="./site.css" rel="stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<!--  jCarousel library -->
+		<script type="text/javascript" src=".//jcarousel/jquery.jcarousel.js"></script>
+		<script type="text/javascript" src=".//jcarousel/jquery.json-2.4.min.js"></script>
+		
+	<!--		<script type="text/javascript" src="./jcarousel/jquery-1.4.2.min.js"></script> -->
+		<!-- jCarousel skin stylesheet -->
+		<link rel="stylesheet" type="text/css" href="./jcarousel/skin.css" />
+		
 	</head>
 	<body>
-		<div id="fb-root"></div>
+	<div id="fb-root"></div>
 
 			<script>
 			  // Additional JS functions here
@@ -27,7 +36,7 @@
 					  if (response.status === 'connected') {
 						    // connected
 						  } else if (response.status === 'not_authorized') {
-						    // not_authorized
+						    //login();
 						  } else {						    // not_logged_in
 						    //login();
 						  }
@@ -38,9 +47,9 @@
 				    FB.login(function(response) {
 				        if (response.authResponse) {
 				            // connected
-				            self.location="Home.html"
+				            self.location="home.html"
 				        } else {
-				            // cancelled
+				            self.location="index.html"
 				        }
 				    });
 				}
@@ -50,21 +59,189 @@
 			     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 			     if (d.getElementById(id)) {return;}
 			     js = d.createElement('script'); js.id = id; js.async = true;
-			     js.src = "//connect.facebook.net/en_US/all.js";
+			     js.src = "a//connect.facebook.net/en_US/all.js";
 			     ref.parentNode.insertBefore(js, ref);
 			     
 			   }(document));
 			</script>
 
+		<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
 
-	<div class="MainWrapper">
-		<div class="inside middle-text ">
-			 <span> ESTAS A SOLO UN CLICK DE <span class="red"> DAR LA CARA </span> POR LOS PROBLEMAS DE TU PAIS </span>
+<div id="wrapper">
+	<div id="top-bar-wrapper" class="fixed"> 
+		<div class="top-bar">
+			<ul>
+				<li  class="share-buttons fb"></li>
+				<li  class="share-buttons tw">
+					<!--<a href="https://twitter.com/share"  class="twitter-share-button" data-url="http://cancan.apphb.com/home.html" data-via="Darieljavier" data-lang="es" data-count="none" data-hashtags="dalacara">
+					</a> -->
+                       
+				</li>
+				<li  class="share-buttons gplus"></li>
+				<li  class="share-buttons pint"></li>
+			</ul>
 		</div>
-		<div class="inside">
-			<a onClick="login()" class="login-button" id="login-access" href="#"></a>
 	</div>
-	</body>
+		<div id="main-content">
+			<div id="list-content" > 
+				<div>	
+						<div id="fb-pics"> </div>			
+						<div class="content-item-wrapper">
+								<ul class="content-item"> 
+									<li> 
+										<div class="handwrite-item">
+											<span class="higher"> CUALQUIERA DE TUS AMIGAS PODRIA SER <span class="red"> VÌCTIMA </span> DE MALTRATO  </span>
+											</br>
+											<span class="lower"> ENFRENTA EL PROBLEMA Y DA LA CARA  POR ELLAS.</span>
+											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'18','qty':'4'}" />
+										</div>
+									 </li>
+									<li> 
+										<div class="handwrite-item">
+											<span class="higher"> PARA EL FINAL DE ESTE DÌA </span>
+											</br>
+											<span class="higher"> <span class="red"> 4 MUJERES </span> SERAN VIOLADA. </span>
+											<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'20','qty':'5'}"
+									    </div>
+									 </li>
+									<li>
+										<div class="handwrite-item">
+											<span class="higher"> CADA DÌA SE REPORTAN AL MENOS </span>
+											</br>
+											<span class="higher"> <span class="red"> 2 CASOS </span> DE MALTRATO HACIA UNA MUJER. </span>
+											<input type="hidden" class="item-data" value="{'gender':'female','status':'single','age':'10','qty':'2'}"
+										</div>
+									</li>
+									<li>
+										<div class="handwrite-item">
+									 		<span class="higher"> ALREDEDOR DE <span class="red"> 3 MUJERES </span> SON REFERIDAS  </span>
+											</br>
+											<span class="higher">  A TERAPIA POR MALTRATO, DIARIAMENTE. </span>
+									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 	</div>
+									 </li>
+									 <li>
+										<div class="handwrite-item">
+									 		<span class="higher"> <span class="red">7</span> DE CADA 10 <span class="red"> MUJERES </span></span>
+											</br>
+											<span class="higher">  EXPERIMENTAN ALGUN TIPO DE MALTRATO DURANTE SU VIDA </span>
+									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 	</div>
+									 </li>
+									 <li>
+										<div class="handwrite-item">
+									 		<span class="lower"> EN LOS ULTIMOS 5 A—OS APROXIMADAMENTE <span class="red">600 MUJERES</span> HAN MUERTO A MANO DE SUS ESPOSOS.</span>
+											</br>
+											<span class="higher"> ESTO INDICA QUE AL MENOS <span class="red"> 10 MUJERES </span> PUEDEN LLEGAR A MORIR CADA MES</span>
+									 		<input type="hidden" class="item-data" value="{'gender':'male','status':'single','age':'25','qty':'1'}"
+									 	</div>
+									 </li>
+
+									
+								</ul> 
+						</div>
+						<div class="clearfix"/>
+						<div class="center-item"> 
+								<div class="inside middle-text ">
+										<span class="red"> DA LA CARA </span> 
+										</br>
+										<span> Y ADVIERTE A TUS AMIGAS </span> 
+								</div>
+								<div class="inside middle-text ">
+									<div class="login-button" ></div>
+								</div>
+
+						</div> 
+						
+				</div>
+			</div>
+		</div>
+	
+
+	
+		<div class="bottom-bar">
+		<div class="bottom-footer-info"> 
+				<span class="big">ESTE SITIO WEB ES INDEPENDIENTE Y SIN FINES DE LUCRO, Y S”LO TIENE COMO OBJETIVO, EL CONOCIMIENTO GENERAL DE PROBLEMAS NACIONALES QUE NOS AFECTAN.</span>
+				</br>
+				<span class="big">NO SE BUSCAN FIRMAS, DONACIONES, NI NADA DE TI, S”LO QUE AYUDES A PROPAGAR EL MENSAJE</span>
+				</br>
+				<span class="small">ESTADÕSTICAS DE LA ORGANIZACI”N CÕVICA PARTICIPACION CIUDADANA </span>
+				<span class="separator small">*</span>
+				<span class="small">SISTEMA NACIONAL SENSITIVO ONE</span>
+				<span class="separator small">*</span>
+				<span class="small">SECRETARIA DE ESTADO DE LA MUJER BOLETINES Y ESTADISTICAS 2013</span>
+				
+			</div>
+			<div class="bottom-icons">
+
+			</div>
+			
+			<div class="clearfix"/>
+		</div>
+	</div>
+
+</body>
 	<script type="text/javascript">
+ 
+		$(function(){ 
+
+			$(".tw").click( function(event)
+				{
+				//$(".tw #a").trigger('click');
+				});
+
+			$('.content-item-wrapper').jcarousel(
+					{
+						//Carousel configuration goes here
+						//Doc @ http://sorgalla.com/projects/jcarousel/
+						scroll : 1,
+						visible: 1,
+						wrap:  "both",
+						buttonNextHTML:"<div class='rightarrow' alt='next'/>",
+						buttonPrevHTML:"<div class='leftarrow' alt='next'/>",
+						itemVisibleInCallback:  { 
+							   onAfterAnimation:
+							   			 function (c, o, i, s) 
+							   			 	{
+
+					                            /*var val = $(o).find('.item-data').val().replace(/'/g, '"');
+					                            val.replace('{','"{');
+					                            val.replace('}','}"');
+					                            
+					                            var data = $.parseJSON(val);
+
+					                            $('#fb-pic img').remove();/*
+
+					                            //-------------------------------------------------
+					                            /*FB.api('/me/friends', { fields: 'name,id,location,birthday,gender' }, function(response) {
+												  	if(response.data) {
+												  		var indexFilter = 0;
+												  		var position = $('.list-item-selected').position();
+												  		$('.list-item-selected').find('.fb-test').css('top', position.top - 60);
+
+											            $.each(response.data,function(index,friend) {
+											                //alert(friend.name + ' has id:' + friend.id + ' gender:' + friend.gender);
+										                
+											                if (indexFilter == data.qty)
+											                 	return false;
+
+											                if (friend.gender == data.gender) {
+											                	//alert($('.list-item-selected').html());
+											                	$('.list-item-selected').find('.fb-test').append("<img src='http://graph.facebook.com/" +friend.id +"/picture' alt='picture'/>");
+											                	indexFilter++;
+											            	}
+											                 
+											            });
+											        } else {
+											            alert("Error!");
+											        }
+												});*/
+					                            
+
+											}
+							}
+					});
+
+		});
 	</script>
 </html>
